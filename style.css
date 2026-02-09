@@ -193,6 +193,30 @@ input[type="text"]:focus {
     }
 }
 
+/* Mobile adjustments for buttons */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: row;
+        /* Keep side by side */
+        gap: 10px;
+        /* Reduce gap */
+        justify-content: center;
+    }
+
+    .btn {
+        width: auto;
+        /* Allow natural width */
+        flex: 1;
+        /* Make them equal width */
+        font-size: 14px;
+        /* Slightly smaller font */
+        padding: 12px 5px;
+        /* Reduce side padding */
+        white-space: nowrap;
+        /* Prevent text wrapping */
+    }
+}
+
 .close-btn {
     color: #aaa;
     float: right;
