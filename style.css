@@ -198,22 +198,25 @@ input[type="text"]:focus {
     .buttons {
         flex-direction: row;
         /* Keep side by side */
-        gap: 10px;
-        /* Reduce gap */
+        gap: 8px;
+        /* Small gap */
         justify-content: center;
+        width: 100%;
     }
 
     .btn {
-        width: auto;
-        /* Allow natural width */
         flex: 1;
-        /* Make them equal width */
-        font-size: 14px;
-        /* Slightly smaller font */
-        padding: 12px 5px;
-        /* Reduce side padding */
+        /* Equal width */
+        font-size: 13px;
+        /* Smaller font to fit text */
+        padding: 10px 2px;
+        /* Minimal side padding */
         white-space: nowrap;
-        /* Prevent text wrapping */
+        /* Strict no wrapping */
+        overflow: hidden;
+        /* Hide overflow if strictly needed */
+        text-overflow: ellipsis;
+        /* Ellipsis if it really overflows */
     }
 }
 
