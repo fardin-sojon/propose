@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Special Question</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="confession-container">
+  
+  <!-- Name Entry Card -->
+  <div id="nameCard" class="confession-card">
+    <h1 class="title">Hello there!</h1>
+    <p class="message">Before we begin, may I ask your name?</p>
+    <input type="text" id="nameInput" placeholder="Enter your beautiful name..." />
+    <button class="btn accept" onclick="submitName()">Continue</button>
+  </div>
+
+  <!-- Main Proposal Card (Initially Hidden) -->
+  <div id="proposalCard" class="confession-card" style="display: none;">
+    <h1 class="title">To <span id="displayName">Someone Special</span></h1>
+    
+    <p class="message" id="nameMessage"></p> <!-- Dynamic message based on name -->
+    
+    <p class="message">They say the best things happen when you least expect them. Seeing you was one of those moments.</p>
+    <p class="message">You have a way of brightening the world just by being in it. <span id="nameInText">You</span>, you are the missing piece I didn't know I was looking for.</p>
+    <p class="message">I can’t promise the world, but I can promise to value you, respect you, and always make you smile.</p>
+    
+    <p class="signature">Yours, <br> Fardin Rahman Sojon</p>
+
+    <p class="cta-text">Will you give me the chance to be a part of your story?</p>
+
+    <div class="buttons">
+      <button id="acceptBtn" class="btn accept" onclick="handleResponse('accept')">Yes, let's see!</button>
+      <button id="rejectBtn" class="btn reject" onclick="handleResponse('reject')">No, sorry.</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="customModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalMessage"></p>
+    <button id="modalActionBtn" class="btn accept" style="margin-top: 15px; display: none;">Okay</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
